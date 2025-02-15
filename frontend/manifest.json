@@ -11,7 +11,7 @@
     "default_popup": "popup.html",
     "default_icon": "Work.png"
   },
-  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "host_permissions": ["http://127.0.0.1:8000/*", "http://3.145.178.209:8000/*"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

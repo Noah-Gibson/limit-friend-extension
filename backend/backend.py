@@ -1,3 +1,10 @@
+from fastapi import FastAPI
+
+app = FastAPI() # Variable holding API
+
+@app.get("/") # Create root endpoint
+def home():
+	return {"Data": "Test"}
 from fastapi import FastAPI, Path, Query, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional, List

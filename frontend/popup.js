@@ -10,7 +10,7 @@ document.getElementById('fetch-user').addEventListener('click', async function()
   
     try {
       // Send a GET request to fetch user by ID from the FastAPI server
-      const response = await fetch(`http://127.0.0.1:8000/api/users/${userId}`, {
+      const response = await fetch(`http://3.145.178.209:8000/api/users/${userId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
