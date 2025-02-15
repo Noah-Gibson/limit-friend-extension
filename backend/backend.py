@@ -24,6 +24,10 @@ class User(BaseModel):
 
 memory_db = {"users": {}}
 
+@app.get("/api/users")
+def get_users():
+    return list(memory_db["users"].values())
+
 @app.get("/api/users/{user_id}", response_model=User)
 def get_user(user_id: str = Path(description="ID of user")):
     if user_id not in memory_db["users"]:
