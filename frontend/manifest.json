@@ -1,10 +1,21 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
-  "version": "1.0",
   "manifest_version": 3,
+  "name": "Screen Time Tracker",
+  "version": "1.0",
+  "description": "Notifies friends when screen time exceeds the limit.",
+  "permissions": ["storage", "notifications", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  }
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }
+
