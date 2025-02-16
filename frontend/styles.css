@@ -1,0 +1,33 @@
+body {
+    width: 400px;
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #87a6e5;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: #95cbed;
+    transition: 0.3s;
+}
+
+    .tab-button.active {
+        background: #cce7ff;
+        font-weight: bold;
+    }
+
+.tab-content {
+    display: none; /* Ensure inactive tabs are hidden */
+    padding: 10px;
+}
+
+    .tab-content.active {
+        display: block; /* Only show the active tab */
+    }

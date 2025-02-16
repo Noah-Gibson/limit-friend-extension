@@ -2,23 +2,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Fetcher</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" width="device-width" initial-scale=1.0">
+    <title>User Fetcher</title>
 </head>
-<body>
-  <h1 style="text-align:center;">Fetch User</h1>
-  <h3 style="text-align:center;">Personal ID: </h3>
-  <!-- Input field for User ID -->
-  <input type="text" id="user-id" placeholder="Enter user ID" />
-  <button id="fetch-user">Fetch User</button>
-  <div style="border:1px outset black; 
-       text-align: center;
-       margin: 5px;"
-       id="user-info"> 
-    <p>This is some text in a div element.</p>
-  </div>
 
-  <script src="popup.js"></script>
+
+<body>
+
+    <div class="tabs">
+        <button class="tab-button active" data-tab="home">Home</button>
+        <button class="tab-button" data-tab="friend's list">Friend's List</button>
+        <button class="tab-button" data-tab="add friend">Add Friend</button>
+        <button class="tab-button" data-tab="settings">Settings</button>
+    </div>
+
+
+    <div class="tab-content active" id="home">
+        <p>Content for Tab 1</p>
+    </div>
+
+    <div class="tab-content" id="friend's list">
+        <p>Content for Tab 2</p>
+    </div>
+
+    <div class="tab-content" id="add friend">
+        <input type="text" id="user-id" placeholder="Enter user ID" />
+        <button id="fetch-user">Fetch User</button>
+    </div>
+
+    <div class="tab-content" id="settings">
+        <h3 style="text-align:center;">Name: <br />Personal ID: </h3>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>
