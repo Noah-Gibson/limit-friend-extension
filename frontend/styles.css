@@ -1,5 +1,6 @@
 
 
+
 .tabs {
     display: flex; 
     justify-content: flex-start; 
@@ -41,6 +42,7 @@
     white-space: nowrap;
 }
 
+
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 *,
 *::before,
@@ -79,6 +81,25 @@ fieldset {
     align-items: flex-start;
     gap: 10px; 
     width: 100%; 
+    background-color: #ff8c8a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 600px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 280px;
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 h1 {
@@ -95,12 +116,15 @@ input[type="text"] {
 }
 
 button {
+
     width: 120px;
+    width: 170px;
     height: 70px;
     font-weight: bold;
     font-size: 20px;
     font-family: "Josefin Sans", sans-serif;
     background-color: #9cbbf7;
+    background-color: #fdcb6e;
     cursor: pointer;
     box-shadow: 5px 5px 0 0;
     transition: 0.3s;
@@ -114,6 +138,14 @@ a {
     position: absolute;
     text-decoration: none;
     color: white;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
+}
+a {
+    position: absolute;
+    text-decoration: none;
+    color: #000;
     z-index: 1000;
 }
 button::after{
@@ -123,6 +155,9 @@ button::after{
     width: 120px;
     height: 70px;
    
+
+    width: 170px;
+    height: 70px;
     opacity: 0;
     transition: 0.3s;
 }
@@ -183,6 +218,7 @@ div.sticky {
 .friends-screen-time-section li {
     margin: 5px 0;
 }
+
 
 
 
