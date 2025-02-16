@@ -1,8 +1,12 @@
 
+body {
+    font-size: 16px;
+}
+
 .tabs {
-    display: flex; /* Makes buttons appear in a row */
-    justify-content: flex-start; /* Align buttons to the left */
-    align-items: flex-start; /* Align buttons to the top */
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: flex-start;
     margin-bottom: 10px;
 }
 
@@ -15,7 +19,7 @@
     font-weight: bold;
     transition: 0.3s;
     border-radius: 5px;
-    margin-right: 5px; /* Add space between buttons */
+    margin-right: 5px; 
 }
 
     .tab-button.active {
@@ -24,19 +28,19 @@
 
 
 .tab-content {
-    display: none; /* Ensure inactive tabs are hidden */
+    display: none;
     padding: 10px;
 }
 
     .tab-content.active {
-        display: block; /* Only show the active tab */
+        display: block; 
     }
 
 #fetch-user {
-    width: 100px; /* Smaller width */
-    height: 40px; /* Smaller height */
-    font-size: 14px; /* Smaller font size */
-    padding: 5px 10px; /* Adjust padding for balance */
+    width: 100px; 
+    height: 40px; 
+    font-size: 14px; 
+    padding: 5px 10px; 
     white-space: nowrap;
 }
 
@@ -61,10 +65,10 @@ body {
 
 .container {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    align-items: flex-start; /* Align buttons to the top */
-    gap: 10px; /* Space between buttons */
-    width: 100%; /* Ensure full width */
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 10px; 
+    width: 100%; 
 }
 
 h1 {
@@ -90,11 +94,9 @@ button {
     cursor: pointer;
     box-shadow: 5px 5px 0 0;
     transition: 0.3s;
-    /* Center text inside the button */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Remove inline-flex which was causing misalignment */
 }
 
 
@@ -140,7 +142,7 @@ div.sticky {
     background-color: #95cbed;
     border: 2px solid #87a6e5;
 }
-/* Screen time sections */
+
 .your-screen-time,
 .friend-screen-time {
     margin: 20px;
@@ -171,5 +173,7 @@ div.sticky {
 .friends-screen-time-section li {
     margin: 5px 0;
 }
+
+
 
 
