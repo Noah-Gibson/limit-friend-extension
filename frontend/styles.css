@@ -1,28 +1,27 @@
 
-body {
-    width: 400px;
-    font-family: Arial, sans-serif;
-}
-
 .tabs {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid #87a6e5;
+    display: flex; /* Makes buttons appear in a row */
+    justify-content: flex-start; /* Align buttons to the left */
+    align-items: flex-start; /* Align buttons to the top */
+    margin-bottom: 10px;
 }
 
 .tab-button {
-    flex: 1;
-    padding: 10px;
-    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #9cbbf7;
     border: none;
-    background: #95cbed;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
     transition: 0.3s;
+    border-radius: 5px;
+    margin-right: 5px; /* Add space between buttons */
 }
 
     .tab-button.active {
-        background: #cce7ff;
-        font-weight: bold;
+        background-color: #7a9be3;
     }
+
 
 .tab-content {
     display: none; /* Ensure inactive tabs are hidden */
@@ -32,6 +31,14 @@ body {
     .tab-content.active {
         display: block; /* Only show the active tab */
     }
+
+#fetch-user {
+    width: 100px; /* Smaller width */
+    height: 40px; /* Smaller height */
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 10px; /* Adjust padding for balance */
+    white-space: nowrap;
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 *,
@@ -44,22 +51,20 @@ body {
 body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: hwb(220 59% 23%);
-    text-align: center;
+    text-align: start;
     margin: 0;
     padding: 0;
     width: 500px;
-    height: 600px;
+    height: 400px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container {
-    width: 90%;
-    max-width: 280px;
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: flex-start; /* Align buttons to the top */
+    gap: 10px; /* Space between buttons */
+    width: 100%; /* Ensure full width */
 }
 
 h1 {
@@ -76,7 +81,7 @@ input[type="text"] {
 }
 
 button {
-    width: 170px;
+    width: 120px;
     height: 70px;
     font-weight: bold;
     font-size: 20px;
@@ -85,11 +90,14 @@ button {
     cursor: pointer;
     box-shadow: 5px 5px 0 0;
     transition: 0.3s;
+    /* Center text inside the button */
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 20px;
+    justify-content: center;
+    /* Remove inline-flex which was causing misalignment */
 }
+
+
 a {
     position: absolute;
     text-decoration: none;
@@ -100,7 +108,7 @@ button::after{
     content: "";
     top: 0;
     left: 0;
-    width: 170px;
+    width: 120px;
     height: 70px;
    
     opacity: 0;
@@ -126,4 +134,9 @@ user-info {
     border-radius: 5px;
 }
 
-
+div.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #95cbed;
+    border: 2px solid #87a6e5;
+}

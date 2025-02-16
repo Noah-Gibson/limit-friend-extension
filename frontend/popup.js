@@ -28,15 +28,19 @@ document.getElementById('fetch-user').addEventListener('click', async function()
           userInfoElement.innerHTML = `<p><strong>ID:</strong> ${user.id}</p>
                                        <p><strong>Name:</strong> ${user.name}</p>`;
         } else {
-          userInfoElement.innerHTML = '<p>User not found.</p>';
+            alert("User not found, please try again");
+            userInfoElement.innerHTML = '<p>User not found.</p>';
+            document.getElementById("submitted").innerText = "User not found";
         }
       } else {
+          alert("User not found, please try again");
         console.error("Failed to fetch user:", response.statusText);
-        document.getElementById('user-info').innerHTML = '<p>Error fetching user data.</p>';
+          document.getElementById('user-info').innerHTML = '<p>Error fetching user data.</p>';
       }
     } catch (error) {
+        alert("User not found, please try again");
       console.error("Error fetching user:", error);
-      document.getElementById('user-info').innerHTML = '<p>Error fetching user data.</p>';
+        document.getElementById('user-info').innerHTML = '<p>Error fetching user data.</p>';
     }
 });
 
