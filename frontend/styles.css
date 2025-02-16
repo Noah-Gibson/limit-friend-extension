@@ -140,3 +140,36 @@ div.sticky {
     background-color: #95cbed;
     border: 2px solid #87a6e5;
 }
+/* Screen time sections */
+.your-screen-time,
+.friend-screen-time {
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.your-screen-time h2,
+.friend-screen-time h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.your-screen-time p,
+.friend-screen-time-section li {
+    font-size: 18px;
+    color: #666;
+}
+
+.friend-screen-time ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.friends-screen-time-section li {
+    margin: 5px 0;
+}
+
+
