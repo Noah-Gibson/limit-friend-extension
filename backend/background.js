@@ -66,7 +66,7 @@ function trackFriendsUsage(){
 });
 });
 }
-
+setInterval(trackFriendsUsage, CHECK_INTERVAL);
 
 
 
