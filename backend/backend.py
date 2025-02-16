@@ -11,7 +11,6 @@ from typing import Optional, List
 from pydantic import BaseModel
 from nanoid import generate
 
-app = FastAPI()
 
 origins = [
     "http://localhost:5173"
