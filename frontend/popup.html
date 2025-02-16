@@ -9,7 +9,7 @@
 </head>
 
 
-<body>
+<body id="rcorners">
 
     <div class="tabs">
         <button class="tab-button active" data-tab="home">Home</button>
@@ -21,8 +21,16 @@
 
     <div class="tab-content active" id="home">
         <h1>Track Your Friends Screentime</h1>
-        <p>Your total screentime: <span id="your-screen-time">2 hours 30 minutes </span></p>
-        <p>Your friend's total screentime: <span id="friend-screen-time">3 hours 30 minutes </span></p>
+        <br />
+        <fieldset>
+            <legend>Your total screentime</legend>
+            <p id="your-screen-time">2 hours 30 minutes </p>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>Friend's total screentime</legend> 
+            <p id="friend-screen-time">3 hours 30 minutes </p>
+        </fieldset>
     </div>
 
     <div class="tab-content" id="friend's list">

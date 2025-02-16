@@ -1,7 +1,4 @@
 
-body {
-    font-size: 16px;
-}
 
 .tabs {
     display: flex; 
@@ -54,13 +51,26 @@ body {
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-color: hwb(220 59% 23%);
+    font-size: 16px;
+    background-color: #b2caf7;
     text-align: start;
     margin: 0;
     padding: 0;
     width: 500px;
     height: 400px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+legend{
+    padding:5px;
+    font-weight:bold;
+}
+
+fieldset {
+    font-size:17px;
+    background-color: #b8cdf5;
+    border-color: black;
+    padding:3px ;
 }
 
 .container {
