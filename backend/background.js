@@ -25,9 +25,13 @@ function trackFriendsUsage(){
 
         let url = new URL(tabs[0].url);
         let domain = url.hostname;
-
-        let friendUsername = 'friend1'; //get friend's username from the database
-
+        
+        chrome.storage.local.get(["friendUsername"], (data)=>{
+        let friendUsername = data.friendUsername //get friend's username from the database
+        if (!friendUsername) {
+            console.log("Friend's username not found");
+            return;
+        }
         chrome.storage.local.get(["friendsLimits"], (data)=>{
             let limits = data.friendsLimits || {}
             let friendLimit = limits[friendUsername] || 300;
@@ -51,12 +55,18 @@ function trackFriendsUsage(){
                 title: 'Limit Exceeded',
                 message: `${friendUsername} has exceeded the limit on ${domain}`
             });
+            
 
             sendScreenTimeToBackend(friendUsername, friendUsage[friendUsername][domain]);
         });
-    }           
+    }
+    chrome.storage.local.set({"Your friends usage": friendsUsage});       
             
     });
 });
+});
 }
-setInterval(trackFriendsUsage, CHECK_INTERVAL);
+
+
+
+
